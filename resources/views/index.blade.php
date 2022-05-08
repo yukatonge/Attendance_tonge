@@ -37,7 +37,7 @@ ul.nav_menu li {
     grid-template-rows: 80px 200px 200px;
     grid-template-columns: 2fr 2fr;
   }
-  .grid_parent div {
+  .grid_parent a {
     text-align: center;
     font-size: 1em;
     width: auto;
@@ -75,9 +75,9 @@ ul.nav_menu li {
 </style>
     <div class="grid_parent">
       <h3 class="text">福場凛太郎さんお疲れ様です！</h3>
-      <div class="time_in">勤務開始</div>
-      <div class="time_out">勤務終了</div>
-      <div class="break_in">休憩開始</div>
-      <div class="break_out">休憩終了</div>
+      <a href="/attendance/start" class="time_in">勤務開始</a>
+      <a href="/attendance/end" class="time_out">勤務終了</a>
+      <a href="/break/start" class="break_in">休憩開始</a>
+      <a href="/break/end" class="break_out">休憩終了</a>
   </div>
 </div>

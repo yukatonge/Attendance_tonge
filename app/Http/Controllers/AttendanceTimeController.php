@@ -2,8 +2,10 @@
 
 namespace App\Http\Controllers;
 
+
 use Illuminate\Http\Request;
 use App\Models\Attendance;
+use Carbon\Carbon;
 
 class AttendanceTimeController extends Controller
 {
@@ -11,12 +13,12 @@ class AttendanceTimeController extends Controller
     {
         return view('index');
     }
-    public function create(Request $request)
+    public function startTime(Request $request)
     {
-        $this->validate($request, Attendance::$rules);
-        $timestamp = new timestamp;
+        $timestamp = new Attendance;
+        $timestamp = Carbon::now();
+        var_dump($timestamp);
         $form = $request->all();
-        unset($form['_token_']);
         $timestamp->fill('$form')->save();
         return redirect('/');
         }
