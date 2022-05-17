@@ -15,7 +15,7 @@ class CreateBreaksTable extends Migration
     {
         Schema::create('breaks', function (Blueprint $table) {
             $table->id()->unique();
-            $table->unsignedBigInteger('attendance_id')->nullable(false)->unique();
+            $table->unsignedBigInteger('attendance_id')->unique();
             $table->datetime('break_in')->nullable();
             $table->datetime('break_out')->nullable();
             $table->timestamp('created_at')->useCurrent()->nullable();

@@ -6,6 +6,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Attendance;
 use Carbon\Carbon;
+use Illuminate\Support\Facades\Auth;
 
 class AttendanceTimeController extends Controller
 {
@@ -15,22 +16,20 @@ class AttendanceTimeController extends Controller
     }
     public function startTime(Request $request)
     {
-        /*
-        $timestamp = new Attendance;
-        $timestamp = Carbon::now('Asia/Tokyo');
-        var_dump($timestamp);
-        $form = $request->all();
-        $timestamp->fill('$form')->save();
-        Attendance::create($form);
-        return redirect('/');
-        */
-        /*
-        $timestamp = Attendance::create([
-            'user_id' => $user->id,
-            'date' => Carbon::today(),
-            'time_in' => Carbon::now(),
-            'time_out' => Carbon::now(),
+        $id = Auth::id();
+
+        $dt = new Carbon();
+        $date = $dt -> toDateString();
+        $time_in = $dt -> toTimeString();
+        
+
+        Attendance::create
+        ([
+            'user_id'=> $id,
+            'date' => $date,
+            'time_in' => $time_in,
         ]);
-        */
-        }
+
+        return redirect('/');
+    }
 }
