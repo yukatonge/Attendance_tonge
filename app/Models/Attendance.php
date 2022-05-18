@@ -10,4 +10,8 @@ class Attendance extends Model
     use HasFactory;
 
     protected $guarded = array('id');
+
+    public function users(){
+        return $this->belongsTo('App\Models\user');
+    }
 }
