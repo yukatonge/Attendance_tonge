@@ -14,4 +14,9 @@ class Attendance extends Model
     public function users(){
         return $this->belongsTo('App\Models\user');
     }
+
+    //リレーションは各Modelにバラけず、belongsToとhasManyを駆使して１箇所にまとめる。
+    public function rests(){
+        return $this->hasMany('App\Models\rest');
+    }
 }
