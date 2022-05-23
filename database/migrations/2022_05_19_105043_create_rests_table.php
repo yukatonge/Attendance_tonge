@@ -15,11 +15,12 @@ class CreateRestsTable extends Migration
     {
         Schema::create('rests', function (Blueprint $table) {
            
-            $table->id();
-            $table->unsignedBigInteger('attendance_id');
+            $table->id()->unique();;
+            $table->unsignedBigInteger('attendance_id')->unique();
             $table->time('rest_in')->nullable();
             $table->time('rest_out')->nullable();
             $table->timestamps();
+            $table->foreign('attendance_id')->references('id')->on('attendances');
         });
     }
 
