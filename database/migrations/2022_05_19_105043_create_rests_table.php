@@ -15,7 +15,7 @@ class CreateRestsTable extends Migration
     {
         Schema::create('rests', function (Blueprint $table) {
            
-            $table->id()->unique();;
+            $table->id()->unique();
             $table->unsignedBigInteger('attendance_id')->unique();
             $table->time('rest_in')->nullable();
             $table->time('rest_out')->nullable();

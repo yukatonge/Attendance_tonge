@@ -62,12 +62,12 @@ ul.nav_menu li {
     grid-row: 2/3;
     background-color: #F2F2F2;
   }
-    .break_in{
+    .rest_in{
     grid-column: 1/2;
     grid-row: 3/4;
     background-color: #F2F2F2;
   }
-    .break_out{
+    .rest_out{
     grid-column: 2/3;
     grid-row: 3/4;
     background-color: #F2F2F2;
@@ -77,7 +77,7 @@ ul.nav_menu li {
       <h3 class="text">福場凛太郎さんお疲れ様です！</h3>
       <a href="/attendance/start" class="time_in">勤務開始</a>
       <a href="/attendance/end" class="time_out">勤務終了</a>
-      <a href="/break/start" class="break_in">休憩開始</a>
-      <a href="/break/end" class="break_out">休憩終了</a>
+      <a href="/rest/start" class="rest_in">休憩開始</a>
+      <a href="/rest/end" class="rest_out">休憩終了</a>
   </div>
 </div>
