@@ -9,6 +9,7 @@ use Illuminate\Support\Facades\Auth;
 
 class AttendanceTimeController extends Controller
 {
+    //indexは1つでOK（他のコントローラに記述の必要なし）
     public function index()
     {
         return view('index');
@@ -18,6 +19,7 @@ class AttendanceTimeController extends Controller
         //承認済みのユーザーを取得
         $id = Auth::id();
 
+        //日付の場合はnew Carbonとセットで
         $dt = new Carbon();
         $date = $dt -> toDateString();
         $time_in = $dt -> toTimeString();
