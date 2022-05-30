@@ -7,7 +7,8 @@ use App\Models\Attendance;
 use Carbon\Carbon;
 use Illuminate\Support\Facades\Auth;
 
-class AttendanceTimeController extends Controller
+
+class AttendanceController extends Controller
 {
     //indexは1つでOK（他のコントローラに記述の必要なし）
     public function index()

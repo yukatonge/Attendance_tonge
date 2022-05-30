@@ -4,8 +4,11 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Rest;
+//Class 'App\Http\Controllers\Attendance' not foundのエラー解消のため以下追加
+use App\Models\Attendance;
 use Carbon\Carbon;
 use Illuminate\Support\Facades\Auth;
+
 
 class RestController extends Controller
 {

@@ -5,6 +5,8 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Carbon\Carbon;
+//Class 'App\Models\Auth' not foundのエラーを解消するために以下を追加
+use Illuminate\Support\Facades\Auth;
 
 class Attendance extends Model
 {
