@@ -23,6 +23,10 @@ class Attendance extends Model
         return $this->hasMany('App\Models\rest');
     }
 
+    public function attendances(){
+        return $this->belongsTo('App\Models\Attendance');
+    }
+
     public static function getAttendance()
     {
         $id = Auth::id();
