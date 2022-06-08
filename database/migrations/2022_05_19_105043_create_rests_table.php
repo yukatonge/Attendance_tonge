@@ -20,7 +20,7 @@ class CreateRestsTable extends Migration
             $table->time('rest_in')->nullable();
             $table->time('rest_out')->nullable();
             $table->timestamps();
-            $table->foreign('attendance_id')->references('id')->on('attendances');
+    
         });
     }
 

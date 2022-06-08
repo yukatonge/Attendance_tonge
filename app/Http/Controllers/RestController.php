@@ -19,7 +19,6 @@ class RestController extends Controller
 
         $attendance = Attendance::getAttendance();
         $attendance_id = $attendance->id;
-        dd($attendance_id);
 
         Rest::create
         ([
@@ -28,6 +27,17 @@ class RestController extends Controller
         ]);
 
         return redirect ('/');
-    
+    }
+
+    public function endRest(Request $request)
+    {
+       $dt = new Carbon();
+       $rest_out = $dt ->toTimeString();
+       $attendance = Attendance::getAttendance();
+       $rest = $attendance->rests->whereNull("end_time")->first();
+
+       Rest::where('id',$rest->id)->update(['rest_out'=>$rest_out]);
+
+       return redirect ('/');
     }
 }
