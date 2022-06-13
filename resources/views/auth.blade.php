@@ -1,11 +1,8 @@
-@extends('layouts.default')
+<!-- @extends('layouts.default')
 <style>
 
 </style>
-  <header class="header">
-    <h1>Atte</h1>
-  </header>
-@section('title')
+@section('title', 'auth.blade.php')
 
 @section('content')
 <form action="/auth" method="post">
@@ -16,4 +13,4 @@
       <tr><th></th><td><input type="submit" value="送信"></td></tr>
   </table>
 </form>
-@endsection
+@endsection -->

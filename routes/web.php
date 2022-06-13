@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AttendanceController;
 use App\Http\Controllers\RestController;
 use App\Http\Controllers\LoginController;
+use App\Http\Controllers\AttendanceListController;
 
 
 /*
@@ -34,6 +35,7 @@ Route::get('/rest/start', [RestController::class, 'startRest']);
 Route::post('/rest/start', [RestController::class, 'startRest']);
 Route::get('/rest/end', [RestController::class, 'endRest']);
 Route::post('/rest/end', [RestController::class, 'endRest']);
+Route::get('/attendancelist', [AttendanceListController::class, 'showAttendance']);
 
 
 require __DIR__.'/auth.php';
