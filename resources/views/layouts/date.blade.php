@@ -2,4 +2,12 @@
 <style>
 
 </style>
-@section('title', 'auth.blade.php')
+@section('title')
+
+@section('content')
+@foreach($dates as $date)
+ <tr>
+   <td>
+     {{$date->created_at}}
+   </td>
+ </tr>

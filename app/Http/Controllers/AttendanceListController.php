@@ -13,6 +13,6 @@ class AttendanceListController extends Controller
         $dt = new Carbon();
         $date = $dt -> toDateString();
         Attendance::where('date', $date) -> first();
-
+        return view('date', ['date' => $date]);
    }
 }
